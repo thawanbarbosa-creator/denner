@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Denner Impressos | Editor de Copy Interativo</title>
+  <title>Denner Impressos | Editor Interativo de Copy</title>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,74 +12,91 @@
       color: #111;
       max-width: 950px;
       margin: 0 auto;
-      padding: 60px 24px;
+      padding: 80px 24px 120px;
       line-height: 1.7;
+      position: relative;
     }
-    h1, h2, h3 {
+
+    h1, h2 {
       font-weight: 700;
       margin-bottom: 12px;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+
     section {
       margin-bottom: 64px;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 32px;
     }
+
+    p, li {
+      color: #333;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    blockquote {
+      border-left: 4px solid #000;
+      padding-left: 12px;
+      color: #444;
+      font-style: italic;
+    }
+
     [contenteditable="true"] {
       outline: 1px dashed #ccc;
       padding: 4px;
       border-radius: 3px;
-      transition: background 0.3s, outline 0.3s;
+      transition: background 0.3s;
     }
+
     [contenteditable="true"]:focus {
-      background: #f4f4f4;
+      background: #f8f8f8;
       outline: 1px solid #000;
     }
-    button {
+
+    /* Botão fixo de exportação */
+    .export-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
       background: #000;
       color: #fff;
       border: none;
-      padding: 12px 22px;
       border-radius: 6px;
-      cursor: pointer;
+      padding: 14px 24px;
       font-weight: 600;
-      display: block;
-      margin: 0 auto;
-      margin-top: 40px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.2s ease;
+      z-index: 1000;
     }
-    ul {
-      margin-left: 20px;
+
+    .export-btn:hover {
+      background: #333;
     }
-    blockquote {
-      font-style: italic;
-      margin: 8px 0 16px;
-      border-left: 4px solid #000;
-      padding-left: 12px;
-      color: #333;
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding-top: 40px;
     }
-    p, li {
-      color: #333;
-    }
+
   </style>
 </head>
-
 <body>
 
-  <h1>📝 Editor Interativo de Copy — Denner Impressos</h1>
+  <h1 style="text-align:center;">📝 Editor Interativo de Copy — Denner Impressos</h1>
   <p style="text-align:center;color:#666;">Clique em qualquer texto para editar. Depois clique em "💾 Exportar Texto" para salvar suas alterações.</p>
   <hr><br>
 
-  <!-- 1ª Dobra -->
   <section>
     <h2 contenteditable="true">Impressos profissionais que elevam sua marca.</h2>
     <p contenteditable="true">Crachás, ingressos, tirantes e caixas personalizadas com qualidade e prazo. Impressos que fortalecem a identidade da sua marca.</p>
     <p contenteditable="true">→ Falar com um especialista agora</p>
   </section>
 
-  <!-- 2ª Dobra -->
   <section>
     <h2 contenteditable="true">Soluções em Impressão</h2>
     <p contenteditable="true">Na Denner Impressos, cada projeto é feito com excelência técnica e tecnologia moderna. Produzimos materiais com acabamento de alto padrão, ideais para empresas, eventos e marcas que buscam destaque.</p>
@@ -92,7 +109,6 @@
     </ul>
   </section>
 
-  <!-- 3ª Dobra -->
   <section>
     <h2 contenteditable="true">Diferenciais que transformam</h2>
     <p contenteditable="true">Inovação e excelência em cada projeto de impressão que desenvolvemos.</p>
@@ -101,4 +117,55 @@
       <li contenteditable="true"><strong>Entrega Expressa</strong> — produção ágil, sem perder a qualidade.</li>
       <li contenteditable="true"><strong>Atendimento Direto</strong> — suporte via WhatsApp para orçamentos e dúvidas.</li>
       <li contenteditable="true"><strong>Personalização Completa</strong> — materiais feitos sob medida para sua marca.</li>
-      <li contenteditabl
+      <li contenteditable="true"><strong>Tecnologia Profissional</strong> — impressoras calibradas e revisadas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 contenteditable="true">O que nossos clientes dizem</h2>
+    <p contenteditable="true">Veja por que somos referência em impressões em Montes Claros.</p>
+    <blockquote contenteditable="true">“Precisava de crachás para um evento corporativo. A Denner entregou com qualidade impecável e dentro do prazo.” — Maria Silva</blockquote>
+    <blockquote contenteditable="true">“Excelente atendimento via WhatsApp, orçamento rápido e preço justo. Os ingressos ficaram perfeitos!” — João Santos</blockquote>
+    <blockquote contenteditable="true">“Trabalho com a Denner há anos. Qualidade dos produtos e atendimento são incomparáveis.” — Ana Costa</blockquote>
+  </section>
+
+  <section>
+    <h2 contenteditable="true">Perguntas Frequentes</h2>
+    <p contenteditable="true"><strong>Qual o prazo médio de entrega?</strong><br>De 24h a 72h, dependendo do tipo de produto.</p>
+    <p contenteditable="true"><strong>Vocês trabalham com pequenas quantidades?</strong><br>Sim! Produzimos tanto tiragens curtas quanto grandes volumes.</p>
+    <p contenteditable="true"><strong>Posso personalizar o design?</strong><br>Sim! Você pode enviar o seu layout ou deixar nossa equipe criar.</p>
+  </section>
+
+  <section>
+    <h2 contenteditable="true">Receba seu orçamento em minutos pelo WhatsApp</h2>
+    <p contenteditable="true">Atendimento rápido e eficiente para transformar seu projeto em realidade. Fale conosco agora e receba sua proposta personalizada!</p>
+    <p contenteditable="true">→ Solicitar orçamento</p>
+  </section>
+
+  <section>
+    <h2 contenteditable="true">Visite nossa loja</h2>
+    <p contenteditable="true">📍 Av. Floriano Neiva, 264 – Alto São João – Montes Claros / MG</p>
+    <p contenteditable="true">📞 (38) 3212-3477 | (38) 99449-7521</p>
+  </section>
+
+  <footer>© 2025 Denner Impressos — Editor Interativo de Copy</footer>
+
+  <!-- Botão fixo -->
+  <button class="export-btn" onclick="exportar()">💾 Exportar Texto</button>
+
+  <script>
+    function exportar() {
+      const textos = Array.from(document.querySelectorAll('[contenteditable="true"]'))
+        .map((el, i) => `#${i + 1} → ${el.innerText.trim()}`)
+        .join('\n\n');
+      const blob = new Blob([textos], { type: "text/plain;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "copy-denner-impressos.txt";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
